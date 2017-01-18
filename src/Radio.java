@@ -13,25 +13,19 @@ public class Radio implements intrad  {
 		frecuencia = true;
 		emisoraFM = 87.9f;
 		emisoraAM = 530;
-		estacionesGuardadasFM = new float [12];
-		estacionesGuardadasAM = new float [12];
+		estacionesGuardadasFM = new float [13];
+		estacionesGuardadasAM = new float [13];
 	}
 	
 	@Override
 	public void  Estado(){
-		if (estado == true){
-			estado = false;
-		}
-		else estado = true;
+		this.estado=!this.estado;
 		
 	}
 	
 	@Override
 	public void Frecuencia() {
-		if (frecuencia == true){
-			frecuencia = false;
-		}
-		else frecuencia = true;
+		this.frecuencia=!this.frecuencia;
 		
 	}
 	@Override
@@ -47,9 +41,19 @@ public class Radio implements intrad  {
 	
 	@Override
 	public float Seleccionar(int posicion) {
+
 		if (this.frecuencia){
-			return estacionesGuardadasFM[posicion];
+			if (posicion==0){
+				return emisoraFM;
+			}
+			this.emisoraFM = estacionesGuardadasFM[posicion];
+			return 0.0f;
+
 		}else{
+			if (posicion==0){
+				return emisoraAM;
+			}
+			this.emisoraAM = estacionesGuardadasAM[posicion];
 			return estacionesGuardadasAM[posicion];
 		}
 	}
@@ -76,7 +80,7 @@ public class Radio implements intrad  {
 		//bajar
 		}else{
 			if (this.frecuencia){
-				if(emisoraFM<87.9f){
+				if(emisoraFM>87.9f){
 					this.emisoraFM=this.emisoraFM-0.2f;
 				}else{
 					this.emisoraFM=107.9f;
