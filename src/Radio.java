@@ -73,6 +73,24 @@ public class Radio implements intrad  {
 	}
 	
 	@Override
+	public boolean getFrecuencia(){
+		return frecuencia;
+	}
+	@Override
+	public boolean getEstado(){
+		return estado;
+	}
+	
+	@Override
+	public float getEmisora(){
+		if(frecuencia){
+			return emisoraFM;
+		}else{
+			return emisoraAM;
+		}
+		
+	}
+	@Override
 	public void Cambiar(boolean cambio) {
 		// Se acepta que "verdadero" significa cambiar hacia arriba y "falso" hacia abajo
 		//subir

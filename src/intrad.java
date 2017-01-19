@@ -24,4 +24,9 @@ public interface intrad {
 	 * @param cambio
 	 */
 	public void Cambiar (boolean cambio);
+	
+	public boolean getFrecuencia();
+	public boolean getEstado();
+	public float getEmisora();
 }
+	
