@@ -19,7 +19,7 @@ public class Radio implements intrad  {
 		}
 		estacionesGuardadasAM = new float [13];
 		for (int j=0;j<13;j++){
-			estacionesGuardadasAM[j]=87.9f;
+			estacionesGuardadasAM[j]=530;
 		}
 	}
 	
@@ -57,7 +57,7 @@ public class Radio implements intrad  {
 				return emisoraFM;
 			}
 			this.emisoraFM = estacionesGuardadasFM[posicion];
-			return 0.0f;
+			return estacionesGuardadasFM[posicion];
 
 		}else{
 			if (posicion==0){
