@@ -17,8 +17,10 @@ public class Radio implements intrad  {
 		for (int i=0;i<13;i++){
 			estacionesGuardadasFM[i]=87.9f;
 		}
-		estacionesGuardadasFM[1]=89.9f;
 		estacionesGuardadasAM = new float [13];
+		for (int j=0;j<13;j++){
+			estacionesGuardadasAM[j]=87.9f;
+		}
 	}
 	
 	@Override
