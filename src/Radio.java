@@ -14,6 +14,10 @@ public class Radio implements intrad  {
 		emisoraFM = 87.9f;
 		emisoraAM = 530;
 		estacionesGuardadasFM = new float [13];
+		for (int i=0;i<13;i++){
+			estacionesGuardadasFM[i]=87.9f;
+		}
+		estacionesGuardadasFM[1]=89.9f;
 		estacionesGuardadasAM = new float [13];
 	}
 	
@@ -31,17 +35,21 @@ public class Radio implements intrad  {
 	@Override
 	public void Guardar(int posicion) {
 		//Se ha definido que "frecuencia" se refiere a AM cuando el booleno es falso y FM cuando el booleano es verdadero
+		
+		if(estado){
 		if (this.frecuencia){
 			estacionesGuardadasFM[posicion] = emisoraFM;
 		}else{
 			estacionesGuardadasAM[posicion] = emisoraAM;
 		}
-		
 	}
+		
+}
 	
 	@Override
 	public float Seleccionar(int posicion) {
-
+		
+		if(estado){
 		if (this.frecuencia){
 			if (posicion==0){
 				return emisoraFM;
@@ -56,12 +64,17 @@ public class Radio implements intrad  {
 			this.emisoraAM = estacionesGuardadasAM[posicion];
 			return estacionesGuardadasAM[posicion];
 		}
+		}
+		else{
+			return 0.0f;
+		}
 	}
 	
 	@Override
 	public void Cambiar(boolean cambio) {
 		// Se acepta que "verdadero" significa cambiar hacia arriba y "falso" hacia abajo
 		//subir
+		if(estado){
 		if (cambio){
 			if (this.frecuencia){
 				if(emisoraFM<107.9){
@@ -95,8 +108,7 @@ public class Radio implements intrad  {
 			}
 		}
 	}
-	
-
+	}
 
 }
 
