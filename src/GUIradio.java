@@ -70,7 +70,7 @@ public class GUIradio {
 		batras.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				r.Cambiar(false);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		batras.setBounds(12, 203, 97, 25);
@@ -80,7 +80,7 @@ public class GUIradio {
 		badelante.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				r.Cambiar(true);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		badelante.setBounds(339, 203, 97, 25);
@@ -89,9 +89,9 @@ public class GUIradio {
 		JButton f1 = new JButton("1");
 		f1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=1;
-				r.Seleccionar(1);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=0;
+				r.Seleccionar(0);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		
@@ -101,9 +101,9 @@ public class GUIradio {
 		JButton f2 = new JButton("2");
 		f2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=2;
-				r.Seleccionar(2);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=1;
+				r.Seleccionar(1);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f2.setBounds(121, 74, 97, 25);
@@ -112,9 +112,9 @@ public class GUIradio {
 		JButton f3 = new JButton("3");
 		f3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=3;
-				r.Seleccionar(3);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=2;
+				r.Seleccionar(2);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f3.setBounds(230, 74, 97, 25);
@@ -123,9 +123,9 @@ public class GUIradio {
 		JButton f4 = new JButton("4");
 		f4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=4;
-				r.Seleccionar(4);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=3;
+				r.Seleccionar(3);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f4.setBounds(339, 74, 97, 25);
@@ -134,9 +134,9 @@ public class GUIradio {
 		JButton f5 = new JButton("5");
 		f5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=5;
-				r.Seleccionar(5);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=4;
+				r.Seleccionar(4);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f5.setBounds(12, 112, 97, 25);
@@ -145,9 +145,9 @@ public class GUIradio {
 		JButton f6 = new JButton("6");
 		f6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=6;
-				r.Seleccionar(6);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=5;
+				r.Seleccionar(5);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f6.setBounds(121, 112, 97, 25);
@@ -156,9 +156,9 @@ public class GUIradio {
 		JButton f7 = new JButton("7");
 		f7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=7;
-				r.Seleccionar(7);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=6;
+				r.Seleccionar(6);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f7.setBounds(230, 112, 97, 25);
@@ -167,9 +167,9 @@ public class GUIradio {
 		JButton f8 = new JButton("8");
 		f8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=6;
-				r.Seleccionar(8);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=7;
+				r.Seleccionar(7);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f8.setBounds(339, 112, 97, 25);
@@ -178,9 +178,9 @@ public class GUIradio {
 		JButton f9 = new JButton("9");
 		f9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=9;
-				r.Seleccionar(9);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=8;
+				r.Seleccionar(8);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f9.setBounds(12, 150, 97, 25);
@@ -189,9 +189,9 @@ public class GUIradio {
 		JButton f10 = new JButton("10");
 		f10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=10;
-				r.Seleccionar(10);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=9;
+				r.Seleccionar(9);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f10.setBounds(121, 150, 97, 25);
@@ -200,9 +200,9 @@ public class GUIradio {
 		JButton f11 = new JButton("11");
 		f11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=11;
-				r.Seleccionar(11);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=10;
+				r.Seleccionar(10);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f11.setBounds(230, 150, 97, 25);
@@ -211,9 +211,9 @@ public class GUIradio {
 		JButton f12 = new JButton("12");
 		f12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				gua=12;
-				r.Seleccionar(12);
-				Emi.setText(Float.toString(r.Seleccionar(0)));
+				gua=11;
+				r.Seleccionar(11);
+				Emi.setText(Float.toString(r.getEmisora()));
 			}
 		});
 		f12.setBounds(339, 150, 97, 25);

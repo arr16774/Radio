@@ -13,12 +13,12 @@ public class Radio implements intrad  {
 		frecuencia = true;
 		emisoraFM = 87.9f;
 		emisoraAM = 530;
-		estacionesGuardadasFM = new float [13];
-		for (int i=0;i<13;i++){
+		estacionesGuardadasFM = new float [12];
+		for (int i=0;i<12;i++){
 			estacionesGuardadasFM[i]=87.9f;
 		}
-		estacionesGuardadasAM = new float [13];
-		for (int j=0;j<13;j++){
+		estacionesGuardadasAM = new float [12];
+		for (int j=0;j<12;j++){
 			estacionesGuardadasAM[j]=530;
 		}
 	}
@@ -53,16 +53,10 @@ public class Radio implements intrad  {
 		
 		if(estado){
 		if (this.frecuencia){
-			if (posicion==0){
-				return emisoraFM;
-			}
 			this.emisoraFM = estacionesGuardadasFM[posicion];
 			return estacionesGuardadasFM[posicion];
 
 		}else{
-			if (posicion==0){
-				return emisoraAM;
-			}
 			this.emisoraAM = estacionesGuardadasAM[posicion];
 			return estacionesGuardadasAM[posicion];
 		}
@@ -76,6 +70,7 @@ public class Radio implements intrad  {
 	public boolean getFrecuencia(){
 		return frecuencia;
 	}
+
 	@Override
 	public boolean getEstado(){
 		return estado;
